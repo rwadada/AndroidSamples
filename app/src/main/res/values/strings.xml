@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DesignTemplate</string>
+    <string name = "default_button">Default Button</string>
+    <string name = "default_title">design template list</string>
+</resources>

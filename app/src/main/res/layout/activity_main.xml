@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android = "http://schemas.android.com/apk/res/android"
+        xmlns:tools = "http://schemas.android.com/tools">
+    
+    <data>
+        <variable
+                name = "content"
+                type = "com.example.designtemplate.MainActivity"/>
+    </data>
+    <android.support.constraint.ConstraintLayout
+            xmlns:app = "http://schemas.android.com/apk/res-auto"
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:background = "@android:color/background_light"
+            tools:context = ".MainActivity">
+        <android.support.v7.widget.Toolbar
+                android:id = "@+id/title"
+                android:background = "@color/colorPrimary"
+                android:layout_width = "match_parent"
+                android:layout_height = "?attr/actionBarSize"
+                app:titleTextColor="?attr/colorBackgroundFloating"
+                app:logo="@mipmap/ic_launcher"
+                app:layout_constraintTop_toTopOf = "parent"/>
+        <ScrollView
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent">
+            
+            <android.support.constraint.ConstraintLayout
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content">
+                
+                <View
+                        android:id = "@+id/spacer"
+                        android:layout_width = "match_parent"
+                        android:layout_height = "?attr/actionBarSize"
+                        app:layout_constraintTop_toTopOf = "parent"/>
+                
+                <Button
+                        android:id="@+id/button1"
+                        android:layout_width = "wrap_content"
+                        android:layout_height = "wrap_content"
+                        android:layout_marginTop = "@dimen/button_margin"
+                        android:text = "@string/default_button"
+                        style="@style/Widget.AppCompat.Button"
+                        app:layout_constraintTop_toBottomOf = "@+id/spacer"
+                        app:layout_constraintStart_toStartOf = "parent"
+                        app:layout_constraintEnd_toEndOf = "parent"/>
+    
+                <Button
+                        android:id="@+id/button2"
+                        android:layout_width = "wrap_content"
+                        android:layout_height = "wrap_content"
+                        android:layout_marginTop = "@dimen/button_margin"
+                        android:text = "@string/default_button"
+                        app:layout_constraintTop_toBottomOf = "@+id/button1"
+                        app:layout_constraintStart_toStartOf = "parent"
+                        app:layout_constraintEnd_toEndOf = "parent"/>
+            
+            </android.support.constraint.ConstraintLayout>
+        
+        
+        </ScrollView>
+    
+    </android.support.constraint.ConstraintLayout>
+</layout>
