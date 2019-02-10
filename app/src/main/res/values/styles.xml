@@ -7,5 +7,29 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    
+    <!--On mobile, at a breakpoint of 360dp, this layout grid uses 16dp margins.-->
+    <style name = "BodyContent">
+        <item name = "android:layout_marginStart">@dimen/dimen4</item>
+        <item name = "android:layout_marginEnd">@dimen/dimen4</item>
+    </style>
+    
+    <!--Touch target minimum of 48 x 48 dp-->
+    <style name = "IconImageView">
+        <item name = "android:layout_width">@dimen/dimen12</item>
+        <item name = "android:layout_height">@dimen/dimen12</item>
+    </style>
+    
+    <!--toolbar style-->
+    <style name = "CustomToolbar">
+        <item name = "android:layout_width">match_parent</item>
+        <item name = "android:layout_height">?attr/actionBarSize</item>
+        <item name = "android:background">@color/colorPrimary</item>
+        <item name = "android:layout_marginBottom">@dimen/dimen2</item>
+        <item name = "android:elevation">0dp</item>
+        
+    </style>
+    
+    
 
 </resources>

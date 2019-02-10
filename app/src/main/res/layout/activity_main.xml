@@ -11,43 +11,39 @@
             xmlns:app = "http://schemas.android.com/apk/res-auto"
             android:layout_width = "match_parent"
             android:layout_height = "match_parent"
-            android:background = "@android:color/background_light"
+            android:background = "@android:color/darker_gray"
             tools:context = ".MainActivity">
         <android.support.v7.widget.Toolbar
                 android:id = "@+id/title"
-                android:background = "@color/colorPrimary"
-                android:layout_width = "match_parent"
-                android:layout_height = "?attr/actionBarSize"
-                app:titleTextColor="?attr/colorBackgroundFloating"
-                app:logo="@mipmap/ic_launcher"
-                app:layout_constraintTop_toTopOf = "parent"/>
+                style = "@style/CustomToolbar"
+                app:titleTextColor = "?attr/colorBackgroundFloating"
+                app:logo = "@mipmap/ic_launcher"
+                app:layout_constraintTop_toTopOf = "parent"
+                tools:ignore = "MissingConstraints"/>
         <ScrollView
+                android:id = "@+id/scrollView"
                 android:layout_width = "match_parent"
-                android:layout_height = "match_parent">
+                android:layout_height = "match_parent"
+                android:layout_marginTop = "?attr/actionBarSize"
+                android:background = "@android:color/background_light"
+                style = "@style/BodyContent">
             
             <android.support.constraint.ConstraintLayout
                     android:layout_width = "match_parent"
                     android:layout_height = "wrap_content">
                 
-                <View
-                        android:id = "@+id/spacer"
-                        android:layout_width = "match_parent"
-                        android:layout_height = "?attr/actionBarSize"
-                        app:layout_constraintTop_toTopOf = "parent"/>
-                
                 <Button
-                        android:id="@+id/button1"
+                        android:id = "@+id/button1"
                         android:layout_width = "wrap_content"
                         android:layout_height = "wrap_content"
                         android:layout_marginTop = "@dimen/button_margin"
                         android:text = "@string/default_button"
-                        style="@style/Widget.AppCompat.Button"
-                        app:layout_constraintTop_toBottomOf = "@+id/spacer"
+                        app:layout_constraintTop_toTopOf = "parent"
                         app:layout_constraintStart_toStartOf = "parent"
                         app:layout_constraintEnd_toEndOf = "parent"/>
-    
+                
                 <Button
-                        android:id="@+id/button2"
+                        android:id = "@+id/button2"
                         android:layout_width = "wrap_content"
                         android:layout_height = "wrap_content"
                         android:layout_marginTop = "@dimen/button_margin"
@@ -55,6 +51,13 @@
                         app:layout_constraintTop_toBottomOf = "@+id/button1"
                         app:layout_constraintStart_toStartOf = "parent"
                         app:layout_constraintEnd_toEndOf = "parent"/>
+                
+                <View
+                        android:layout_width = "match_parent"
+                        android:layout_height = "1000dp"
+                        style = "@style/BodyContent"
+                        android:background = "@color/colorPrimary"
+                        app:layout_constraintTop_toBottomOf = "@+id/button2"/>
             
             </android.support.constraint.ConstraintLayout>
         
